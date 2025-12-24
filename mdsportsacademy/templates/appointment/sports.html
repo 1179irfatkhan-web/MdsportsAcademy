@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+        {% load static %}
+        
+        {% block head %}
+        <title>Sports Menu</title>
+        <style>
+            /* Style for the header */
+            header {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
+        
+            /* Style for the drop-down menus */
+            .dropdown {
+                display: inline-block;
+                margin: 20px;
+                position: relative;
+            }
+        
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                z-index: 1;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                padding: 12px 16px;
+                border-radius: 5px;
+                text-align: center;
+            }
+        
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        
+            /* Style for the icons */
+            .icon-container {
+                display: inline-block;
+                position: relative;
+            }
+        
+            .icon {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 10px;
+            }
+        
+            .icon-text {
+                display: flex;
+                align-items: center;
+                font-weight: bolder;
+                position: absolute;
+                left: 60px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                white-space: nowrap;
+            }
+        
+            /* Style for the grid layout */
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 20px;
+                justify-items: center;
+                margin: 20px;
+            }
+        
+        </style>
+        {% endblock %}
+        
+        {% block body %}
+        
+        <header>
+            <h1>Sports Dictionary</h1>
+        </header>
+        
+        <div class="grid-container">
+            <!-- First sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="https://cdn.pixabay.com/photo/2013/07/13/10/51/football-157930_960_720.png" alt="Football">
+                    <span class="icon-text">Football</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>Football</h2>
+                    <p>Football is a team sport that is played with a ball between two teams of eleven players.</p>
+                </div>
+            </div>
+        
+            <!-- Second sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="https://cdn.pixabay.com/photo/2013/07/12/14/07/basketball-147794_960_720.png" alt="Basketball">
+                    <span class="icon-text">Basketball</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>Basketball</h2>
+                    <p>Basketball is a team sport that is played with a ball between two teams of five players.</p>
+                </div>
+            </div>
+    
+            <!-- Third sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="https://media.istockphoto.com/id/1218659572/vector/realistic-tennis-racket-and-ball-on-white-background.jpg?s=1024x1024&w=is&k=20&c=zIYOqB7v3ZU0ieqcpKyrZytfjsCjwQlRtZ2s7B9LQ0k=" alt="Tennis">
+                    <span class="icon-text">Tennis</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>Tennis</h2>
+                    <p>Tennis is a sport that is played with a racket and a ball between two players (singles) or between two teams of two players (doubles).</p>
+                </div>
+            </div>
+
+    
+            <!-- Fourth sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="https://cdn.pixabay.com/photo/2013/07/13/10/51/table-tennis-157932_960_720.png" alt="Table Tennis">
+                    <span class="icon-text">Table Tennis</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>Table Tennis</h2>
+                    <p>Table tennis is a sport that is played with small rackets and a light ball on a table with a net dividing the playing surface into two halves.</p>
+                </div>
+            </div>
+
+            <!-- Fifth sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="https://media.istockphoto.com/id/1224205923/photo/man-is-swimming-breaststroke-water-sports-concept.jpg?s=1024x1024&w=is&k=20&c=HIPHRsaV0hlv2VQqzbAWmAmtQrZH-u8CTS-NJXy0y3s=" alt="Table Tennis">
+                    <span class="icon-text">Swimming</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>Swimming</h2>
+                    <p>Table tennis is a sport that is played with small rackets and a light ball on a table with a net dividing the playing surface into two halves.</p>
+                </div>
+            </div>
+
+            <!-- Sixth sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="https://cdn.pixabay.com/photo/2016/05/31/23/21/badminton-1428047_960_720.jpg" alt="Table Tennis">
+                    <span class="icon-text">Badminton</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>Badminton</h2>
+                    <p>Table tennis is a sport that is played with small rackets and a light ball on a table with a net dividing the playing surface into two halves.</p>
+                </div>
+            </div>
+
+            <!-- Seventh sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="https://cdn.pixabay.com/photo/2017/08/14/08/22/volleyball-2639700_960_720.jpg" alt="Table Tennis">
+                    <span class="icon-text">Volleyball</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>Volleyball</h2>
+                    <p>Table tennis is a sport that is played with small rackets and a light ball on a table with a net dividing the playing surface into two halves.</p>
+                </div>
+            </div>
+
+            <!-- Eightth sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="https://cdn.pixabay.com/photo/2019/05/06/03/45/baseball-4182179__340.jpg" alt="Table Tennis">
+                    <span class="icon-text">Baseball</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>Baseball</h2>
+                    <p>Table tennis is a sport that is played with small rackets and a light ball on a table with a net dividing the playing surface into two halves.</p>
+                </div>
+            </div>
+
+            <!-- Nineth sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="https://cdn.pixabay.com/photo/2022/01/27/14/37/cricket-6972297__340.jpg" alt="Table Tennis">
+                    <span class="icon-text">Cricket</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>Cricket</h2>
+                    <p>Table tennis is a sport that is played with small rackets and a light ball on a table with a net dividing the playing surface into two halves.</p>
+                </div>
+            </div>
+
+             <!-- tenth sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="https://www.researchgate.net/profile/Filipa-Almeida-8/publication/349029290/figure/fig2/AS:987449828315137@1612437793500/Judo-throw-uchi-mata-applied-during-an-official-combat_Q320.jpg" alt="Table Tennis">
+                    <span class="icon-text">Judo</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>Judo</h2>
+                    <p>Judo techniques are divided into three major categories: nage waza (throwing techniques), katame waza (grappling techniques, and atemi waza (vital-point striking techniques). Nage waza are many and varied, their purpose being to unbalance an opponents posture and throw the opponent to the floor.</p>
+                </div>
+            </div>
+
+             <!-- 11th sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="https://c8.alamy.com/comp/EFNWM1/mma-fighter-lifts-his-opponent-and-throws-him-to-the-canvas-EFNWM1.jpg" alt="Table Tennis">
+                    <span class="icon-text">MMA</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>MMA</h2>
+                    <p>In martial arts, a throw is a grappling technique that involves off-balancing or lifting an opponent, and throwing them to the ground, in Japanese martial arts referred to as nage-waza, 投げ技, "throwing technique". Throws are a subset of takedown (grappling).</p>
+                </div>
+            </div>
+
+             <!-- 12th sport -->
+            <div class="dropdown">
+                <div class="icon-container">
+                    <img class="icon" src="data:image/jpeg;base64,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" alt="Table Tennis">
+                    <span class="icon-text">weslrting</span>
+                </div>
+                <div class="dropdown-content">
+                    <h2>weslrting</h2>
+                    <p>A body slam is any move in which a wrestler picks up his or her opponent and throws him or her down to the ground. When used by itself, the term body slam generally refers to a basic scoop slam.</p>
+                </div>
+            </div>
+        </div>
+        
+        {% endblock %}

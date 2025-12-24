@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Slot List{% endblock %}
+
+
+
+{% block content %}
+
+    <section class="coach-area section-padding-40-0">
+
+    <div class="container">
+
+
+      <div class="row">
+
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center">
+
+
+            <h3>{{ request.user.first_name }}'s Slot/s</h3>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          {% for apt in appointment %}
+        <!-- Single coach Area -->
+        <div class="col-12 col-sm-6 col-md-4">
+
+          <div class="single-coach-area mb-100">
+            <img  style="height: 300px; width: 400px" src="{{ apt.image.url }}" alt="">
+            <!-- coach Content -->
+            <div class="coach-content">
+              <!-- Social Info -->
+              <div class="coach-social-info">
+
+              </div>
+              <!-- coach Info -->
+              <div class="coach-info bg-gradient-overlay jarallax">
+                <h5>{{ apt.full_name }}</h5>
+                <p>{{ apt.department }} Expert</p>
+                  <p>{{ apt.qualification_name }}, {{ apt.institute_name }}</p>
+                  <p>Available {{ apt.start_time }} to {{ apt.end_time }} in {{ apt.academy_name }}</p>
+                  <p> AT {{ apt.location }}</p><p>Fees {{ apt.fees }} <br>
+                      <i class="fa fa-trash-o" style="color: red" aria-hidden="true"></i>
+                      <a href="{% url 'appointment:delete-appointment' apt.id %}">Delete Appointment slot</a>
+                  </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

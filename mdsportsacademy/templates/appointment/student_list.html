@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Appointments List{% endblock %}
+
+{% block content %}
+    <section class="coach-area section-padding-50-0">
+
+        <div class="container" style="align-items: center; justify-content: center;display: flex;">
+            <div class="col-12 col-sm-6 col-md-4">
+
+                <h3 style="align-items: center;justify-content: center;display: flex"> {{ request.user.first_name }} has {{ students.count }}
+                    Appointment/s</h3>
+
+                <br >
+                <br >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="coach-area section-padding-30-0">
+
+        <div class="container">
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Message</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Actions</th>
+
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for student in students %}
+                    <tr>
+
+                        <td>{{ student.full_name }}</td>
+                        <td> {{ student.phone_number }}</td>
+                        <td> {{ student.message }}</td>
+                        <td> {{ student.date }}</td>
+                        <td>
+
+                            <a href="{% url 'appointment:delete-student' student.id %}">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+
+{% endblock %}

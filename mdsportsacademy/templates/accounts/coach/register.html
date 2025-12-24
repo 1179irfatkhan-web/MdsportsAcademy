@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load bootstrap_tags %}
+{% block title %} Coach Registration {% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+<div class="row justify-content-center">
+
+                <div class="col-lg-5 mb-5 mb-lg-0">
+
+                 <h3 text-align="center">Coach Registration</h3>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+
+                        {{ form|as_bootstrap }}
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <input type="submit" value="Register" class="btn btn-primary btn-md text-white">
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+{% endblock %}
